@@ -13,8 +13,8 @@ class child extends Base{
 $b=new Child();
 $b->abc(); */
 
-/* Here in the above example,so far the abc method of Base class is inherited insdie Child Class
-Now we wil use trait having same function
+/* Here in the above example,so far the abc method of Base class is inherited inside Child Class
+Now we will use trait having same function
 */
 class Base{
     public function abc(){
