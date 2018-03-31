@@ -63,16 +63,50 @@ This also produces an error
     }
 }
 
-*/
-
 namespace abc1{
     class test{
-        
+        function abc(){
+                echo "inside abc1 namespace";
+        }
     }
 }
 
 namespace {
     class test{
-        
+        function abc(){
+            echo "inside global namespace";
+        }
+    }
+    //To access methods withing that namespace
+    $obj=new test();
+
+    //To access methods within other namespace(in this case abc1 namespace)
+    $obj=new abc1\test();
+    
+    //Another way is to use "use" keyword.Here since name of the class is same,we use alias and call test class as test2. and make object of test2
+      use abc1\test as test2;
+    $obj=new test2();
+    $obj->abc();
+    $obj->abc();
+}
+
+*/
+namespace abc1{
+    class test{
+        function abc(){
+                echo "inside abc1 namespace";
+        }
     }
 }
+
+namespace {
+    class test{
+        function abc(){
+            echo "inside global namespace";
+        }
+    }
+    use abc1\test as test2;
+    $obj=new test2();
+    $obj->abc();
+}
+?>
