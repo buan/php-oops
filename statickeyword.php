@@ -21,7 +21,7 @@ echo abc::myfunc("Banerjee");
 //SoumyaBanerjee
 
 /**
- * In case of non static method we sue this function
+ * In case of non static method we use this function
  * eg
  * public function display(){
  * 
@@ -47,7 +47,7 @@ echo abc::myfunc("Banerjee");
     }
 }
 
-//call a static object
+//call a static variable
 echo xyz::$data."<br>";
 
 //call static method
